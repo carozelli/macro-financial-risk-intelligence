@@ -1,0 +1,2 @@
+date,risk_level,risk_score,alerts,cpi_yoy_pct,unrate,fedfunds,us10y
+2026-01-01 00:00:00,LOW RISK,1,Bond Yield Stress,2.39,4.3,3.64,4.21

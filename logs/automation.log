@@ -1,0 +1,84 @@
+2026-02-18 20:40:46,312 | INFO | Running fred_multi.py
+2026-02-18 20:40:49,276 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=948)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=936)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=859)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16014)
+
+FRED multi download DONE ✅
+2026-02-18 20:40:49,277 | INFO | Running us_macro_build.py
+2026-02-18 20:40:50,038 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 769 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+764 2025-09-01  324.245        4.4  ...       10.661372      4.259019      4.310569
+765 2025-10-01      NaN        NaN  ...       -0.821310      4.149019      4.274364
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+
+[5 rows x 21 columns]
+2026-02-18 20:40:50,039 | INFO | Running us_risk_engine.py
+2026-02-18 20:40:50,778 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-01-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 768, dtype: object
+2026-02-18 20:40:50,778 | INFO | Running sql_store_and_query.py
+2026-02-18 20:40:51,508 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-02-18 20:40:51,508 | INFO | Running us_excel_report.py
+2026-02-18 20:40:52,971 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-02-18 20:40:52,971 | INFO | Running us_pdf_report.py
+2026-02-18 20:40:53,761 | INFO | ✅ PDF generated: ../reports/macro_us_executive_brief.pdf
+2026-02-18 20:40:53,761 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-02-18 21:24:52,264 | INFO | Running fred_multi.py
+2026-02-18 21:24:55,548 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=948)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=936)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=859)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16015)
+
+FRED multi download DONE ✅
+2026-02-18 21:24:55,548 | INFO | Running us_macro_build.py
+2026-02-18 21:24:56,329 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 769 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+764 2025-09-01  324.245        4.4  ...       10.661372      4.259019      4.310569
+765 2025-10-01      NaN        NaN  ...       -0.821310      4.149019      4.274364
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+
+[5 rows x 21 columns]
+2026-02-18 21:24:56,329 | INFO | Running us_risk_engine.py
+2026-02-18 21:24:57,024 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-01-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 768, dtype: object
+2026-02-18 21:24:57,024 | INFO | Running sql_store_and_query.py
+2026-02-18 21:24:57,711 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-02-18 21:24:57,712 | INFO | Running us_macro_index.py
+2026-02-18 21:24:59,380 | INFO | ✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+763 2025-08-01           -1.909953     VERY LOW
+764 2025-09-01           -1.900960     VERY LOW
+766 2025-11-01           -2.061555     VERY LOW
+767 2025-12-01           -2.162323     VERY LOW
+768 2026-01-01           -2.312239     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Forecast chart saved.
+2026-02-18 21:24:59,380 | INFO | Running us_excel_report.py
+2026-02-18 21:25:00,913 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-02-18 21:25:00,913 | INFO | Running us_pdf_report.py
+2026-02-18 21:25:01,665 | INFO | ✅ PDF updated with forecast interpretation: ../reports/macro_us_executive_brief.pdf
+2026-02-18 21:25:01,665 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
