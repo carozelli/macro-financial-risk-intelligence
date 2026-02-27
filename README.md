@@ -1,4 +1,4 @@
-# 📊 Automated Macro-Financial Risk Intelligence System
+# 📊 Financial Data Intelligence & Macro Risk Automation System
 
 ### Financial Data Analyst Portfolio Project
 
@@ -6,9 +6,11 @@ This project demonstrates the design of an automated financial data intelligence
 
 ## 🚀 Business Problem
 
-Financial planning teams need automated monitoring of macroeconomic risk to support budgeting, scenario planning, and capital allocation decisions. 
+Financial decision-makers operate in highly dynamic macroeconomic environments where inflation shocks, rate changes, and labor market shifts directly impact forecasting accuracy and capital allocation.
 
-This project simulates an enterprise-level FP&A macro risk intelligence system that automatically ingests real economic data, engineers financial indicators, classifies macro regimes, and generates executive-ready reports.
+However, macro monitoring is often manual, fragmented, and reactive.
+
+This project simulates an enterprise-grade Financial Data Intelligence system that transforms raw macroeconomic data into structured, interpretable risk signals to support proactive financial decision-making.
 
 ## Overview
 
@@ -89,6 +91,21 @@ Each regime is mapped to a historical macroeconomic interpretation to support fi
 - `logs/automation.log`
 
 ---
+
+---
+
+## Financial Decision Impact
+
+The system bridges raw macroeconomic volatility and structured financial interpretation.
+
+It enables:
+
+- Early detection of inflationary and tightening cycles
+- Quantified macro stress monitoring via composite index
+- Data-backed scenario comparison against historical stress regimes
+- Automated executive reporting without manual spreadsheet manipulation
+
+This demonstrates how Financial Data Analytics can directly support treasury planning, risk management, and capital strategy decisions.
 
 ## Business Application
 
