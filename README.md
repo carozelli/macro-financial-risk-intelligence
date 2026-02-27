@@ -1,5 +1,11 @@
 # 📊 Automated Macro-Financial Risk Intelligence System
 
+## 🚀 Business Problem
+
+Financial planning teams need automated monitoring of macroeconomic risk to support budgeting, scenario planning, and capital allocation decisions. 
+
+This project simulates an enterprise-level FP&A macro risk intelligence system that automatically ingests real economic data, engineers financial indicators, classifies macro regimes, and generates executive-ready reports.
+
 ## Overview
 
 This project is an automated macro-financial analytics pipeline built in Python.
