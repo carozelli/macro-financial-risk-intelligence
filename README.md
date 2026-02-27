@@ -1,5 +1,9 @@
 # 📊 Automated Macro-Financial Risk Intelligence System
 
+### Financial Data Analyst Portfolio Project
+
+This project demonstrates the design of an automated financial data intelligence pipeline that transforms raw macroeconomic data into structured risk signals and executive-level insights.
+
 ## 🚀 Business Problem
 
 Financial planning teams need automated monitoring of macroeconomic risk to support budgeting, scenario planning, and capital allocation decisions. 
