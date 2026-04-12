@@ -82,3 +82,457 @@ Name: 768, dtype: object
 2026-02-18 21:25:00,913 | INFO | Running us_pdf_report.py
 2026-02-18 21:25:01,665 | INFO | ✅ PDF updated with forecast interpretation: ../reports/macro_us_executive_brief.pdf
 2026-02-18 21:25:01,665 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 17:01:42,924 | INFO | Running fred_multi.py
+2026-04-12 17:01:43,608 | ERROR | Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py", line 3, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+2026-04-12 17:01:43,608 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 17:02:11,947 | INFO | Running fred_multi.py
+2026-04-12 17:02:14,977 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 17:02:14,977 | INFO | Running us_macro_build.py
+2026-04-12 17:02:15,722 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 17:02:15,722 | INFO | Running us_risk_engine.py
+2026-04-12 17:02:16,393 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 17:02:16,393 | INFO | Running sql_store_and_query.py
+2026-04-12 17:02:17,102 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 17:02:17,102 | INFO | Running us_macro_index.py
+2026-04-12 17:02:20,266 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 17:02:20,266 | INFO | Running us_excel_report.py
+2026-04-12 17:02:21,894 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 17:02:21,894 | INFO | Running us_pdf_report.py
+2026-04-12 17:02:22,721 | INFO | ✅ PDF upgraded with context & percentile: ../reports/macro_us_executive_brief.pdf
+2026-04-12 17:02:22,722 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 18:01:25,482 | INFO | Running fred_multi.py
+2026-04-12 18:01:26,026 | ERROR | Traceback (most recent call last):
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py"[0m, line [35m3[0m, in [35m<module>[0m
+    import pandas as pd
+[1;35mModuleNotFoundError[0m: [35mNo module named 'pandas'[0m
+2026-04-12 18:01:26,027 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 18:01:50,338 | INFO | Running fred_multi.py
+2026-04-12 18:01:50,864 | ERROR | Traceback (most recent call last):
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py"[0m, line [35m3[0m, in [35m<module>[0m
+    import pandas as pd
+[1;35mModuleNotFoundError[0m: [35mNo module named 'pandas'[0m
+2026-04-12 18:01:50,864 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 18:01:59,683 | INFO | Running fred_multi.py
+2026-04-12 18:02:01,839 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+2026-04-12 18:02:01,839 | ERROR | Traceback (most recent call last):
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py"[0m, line [35m40[0m, in [35m<module>[0m
+    df = get_series(sid)
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py"[0m, line [35m23[0m, in [35mget_series[0m
+    [31mr.raise_for_status[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"c:\Users\gabri\anaconda3\Lib\site-packages\requests\models.py"[0m, line [35m1024[0m, in [35mraise_for_status[0m
+    raise HTTPError(http_error_msg, response=self)
+[1;35mrequests.exceptions.HTTPError[0m: [35m500 Server Error: Internal Server Error for url: https://api.stlouisfed.org/fred/series/observations?series_id=FEDFUNDS&api_key=ed446d0aab8c8d085bca972186c620d3&file_type=json[0m
+2026-04-12 18:02:01,839 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 18:05:07,612 | INFO | Running fred_multi.py
+2026-04-12 18:05:08,132 | ERROR | Traceback (most recent call last):
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py"[0m, line [35m3[0m, in [35m<module>[0m
+    import pandas as pd
+[1;35mModuleNotFoundError[0m: [35mNo module named 'pandas'[0m
+2026-04-12 18:05:08,132 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 18:05:08,283 | INFO | Running fred_multi.py
+2026-04-12 18:05:10,578 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 18:05:10,579 | INFO | Running us_macro_build.py
+2026-04-12 18:05:11,585 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 18:05:11,585 | ERROR | C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\us_macro_build.py:27: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.
+  df[f"{col}_mom_pct"] = df[col].pct_change(1) * 100
+C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\us_macro_build.py:28: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.
+  df[f"{col}_yoy_pct"] = df[col].pct_change(12) * 100
+C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\us_macro_build.py:27: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.
+  df[f"{col}_mom_pct"] = df[col].pct_change(1) * 100
+C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\us_macro_build.py:28: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.
+  df[f"{col}_yoy_pct"] = df[col].pct_change(12) * 100
+2026-04-12 18:05:11,585 | INFO | Running us_risk_engine.py
+2026-04-12 18:05:12,438 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 18:05:12,439 | INFO | Running sql_store_and_query.py
+2026-04-12 18:05:13,251 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 18:05:13,251 | INFO | Running us_macro_index.py
+2026-04-12 18:05:15,997 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057261     VERY LOW
+767 2025-12-01           -2.158109     VERY LOW
+768 2026-01-01           -2.308203     VERY LOW
+769 2026-02-01           -2.264491     VERY LOW
+770 2026-03-01           -1.976911     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 18:05:15,998 | INFO | Running us_excel_report.py
+2026-04-12 18:05:17,934 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 18:05:17,934 | INFO | Running us_pdf_report.py
+2026-04-12 18:05:18,681 | ERROR | Traceback (most recent call last):
+  File [35m"C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\us_pdf_report.py"[0m, line [35m3[0m, in [35m<module>[0m
+    from reportlab.lib.pagesizes import A4
+[1;35mModuleNotFoundError[0m: [35mNo module named 'reportlab'[0m
+2026-04-12 18:05:18,681 | ERROR | Pipeline failed at us_pdf_report.py
+2026-04-12 18:32:32,156 | INFO | Running fred_multi.py
+2026-04-12 18:32:35,144 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 18:32:35,144 | INFO | Running us_macro_build.py
+2026-04-12 18:32:35,812 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 18:32:35,812 | INFO | Running us_risk_engine.py
+2026-04-12 18:32:36,426 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 18:32:36,427 | INFO | Running sql_store_and_query.py
+2026-04-12 18:32:37,027 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 18:32:37,027 | INFO | Running us_macro_index.py
+2026-04-12 18:32:38,961 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 18:32:38,962 | INFO | Running us_excel_report.py
+2026-04-12 18:32:40,421 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 18:32:40,421 | INFO | Running us_pdf_report.py
+2026-04-12 18:32:41,129 | INFO | ✅ PDF upgraded with context & percentile: ../reports/macro_us_executive_brief.pdf
+2026-04-12 18:32:41,129 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 18:37:59,332 | INFO | Running fred_multi.py
+2026-04-12 18:38:02,026 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 18:38:02,026 | INFO | Running us_macro_build.py
+2026-04-12 18:38:02,694 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 18:38:02,694 | INFO | Running us_risk_engine.py
+2026-04-12 18:38:03,323 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 18:38:03,323 | INFO | Running sql_store_and_query.py
+2026-04-12 18:38:03,937 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 18:38:03,937 | INFO | Running us_macro_index.py
+2026-04-12 18:38:05,776 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 18:38:05,776 | INFO | Running us_excel_report.py
+2026-04-12 18:38:07,143 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 18:38:07,143 | INFO | Running us_pdf_report.py
+2026-04-12 18:38:07,845 | INFO | ✅ PDF upgraded with context & percentile: ../reports/macro_us_executive_brief.pdf
+2026-04-12 18:38:07,846 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 19:01:07,061 | INFO | Running fred_multi.py
+2026-04-12 19:01:10,211 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 19:01:10,211 | INFO | Running us_macro_build.py
+2026-04-12 19:01:10,890 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 19:01:10,890 | INFO | Running us_risk_engine.py
+2026-04-12 19:01:11,509 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 19:01:11,509 | INFO | Running sql_store_and_query.py
+2026-04-12 19:01:12,238 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 19:01:12,239 | INFO | Running us_macro_index.py
+2026-04-12 19:01:14,232 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 19:01:14,232 | INFO | Running us_excel_report.py
+2026-04-12 19:01:15,678 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 19:01:15,678 | INFO | Running us_pdf_report.py
+2026-04-12 19:01:16,469 | INFO | ✅ PDF upgraded with context & percentile: ../reports/macro_us_executive_brief.pdf
+2026-04-12 19:01:16,469 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 19:01:19,373 | INFO | Running fred_multi.py
+2026-04-12 19:01:22,097 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 19:01:22,097 | INFO | Running us_macro_build.py
+2026-04-12 19:01:22,798 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 19:01:22,798 | INFO | Running us_risk_engine.py
+2026-04-12 19:01:23,417 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 19:01:23,417 | INFO | Running sql_store_and_query.py
+2026-04-12 19:01:24,042 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 19:01:24,042 | INFO | Running us_macro_index.py
+2026-04-12 19:01:25,863 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 19:01:25,863 | INFO | Running us_excel_report.py
+2026-04-12 19:01:27,238 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 19:01:27,238 | INFO | Running us_pdf_report.py
+2026-04-12 19:01:27,912 | INFO | ✅ PDF upgraded with context & percentile: ../reports/macro_us_executive_brief.pdf
+2026-04-12 19:01:27,912 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 19:08:01,897 | INFO | Running fred_multi.py
+2026-04-12 19:08:02,509 | ERROR | Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\src\fred_multi.py", line 3, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+2026-04-12 19:08:02,509 | ERROR | Pipeline failed at fred_multi.py
+2026-04-12 19:40:50,677 | INFO | Running fred_multi.py
+2026-04-12 19:40:53,750 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 19:40:53,750 | INFO | Running us_macro_build.py
+2026-04-12 19:40:54,414 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 19:40:54,414 | INFO | Running us_risk_engine.py
+2026-04-12 19:40:55,035 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 19:40:55,035 | INFO | Running sql_store_and_query.py
+2026-04-12 19:40:55,642 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 19:40:55,642 | INFO | Running us_macro_index.py
+2026-04-12 19:40:57,570 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 19:40:57,571 | INFO | Running us_excel_report.py
+2026-04-12 19:40:58,996 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 19:40:58,996 | INFO | Running us_pdf_report.py
+2026-04-12 19:40:59,678 | INFO | ✅ PDF upgraded with executive insight: C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\reports\macro_us_executive_brief.pdf
+2026-04-12 19:40:59,678 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
+2026-04-12 19:49:28,167 | INFO | Running fred_multi.py
+2026-04-12 19:49:31,132 | INFO | ✅ Saved us_cpi: ../data/raw/us_cpi.csv (rows=950)
+✅ Saved us_unrate: ../data/raw/us_unrate.csv (rows=938)
+✅ Saved us_fedfunds: ../data/raw/us_fedfunds.csv (rows=861)
+✅ Saved us_10y: ../data/raw/us_10y.csv (rows=16052)
+
+FRED multi download DONE ✅
+2026-04-12 19:49:31,132 | INFO | Running us_macro_build.py
+2026-04-12 19:49:31,802 | INFO | ✅ Built dataset: ../data/processed/macro_us_monthly.csv
+Rows: 771 | Columns: 21
+          date   us_cpi  us_unrate  ...  us_10y_yoy_pct  us_10y_roll3  us_10y_roll6
+766 2025-11-01  325.063        4.5  ...       -6.012701      4.092061      4.219377
+767 2025-12-01  326.031        4.4  ...       -5.652984      4.099630      4.179324
+768 2026-01-01  326.588        4.3  ...       -8.976957      4.150190      4.149604
+769 2026-02-01  327.460        4.4  ...       -7.307556      4.160824      4.126442
+770 2026-03-01  330.293        4.3  ...       -0.807553      4.195066      4.147348
+
+[5 rows x 21 columns]
+2026-04-12 19:49:31,803 | INFO | Running us_risk_engine.py
+2026-04-12 19:49:32,420 | INFO | ✅ Risk Engine Applied
+
+Latest Month:
+date          2026-03-01 00:00:00
+risk_score                      1
+risk_level               LOW RISK
+alerts          Bond Yield Stress
+Name: 770, dtype: object
+2026-04-12 19:49:32,420 | INFO | Running sql_store_and_query.py
+2026-04-12 19:49:33,022 | INFO | ✅ SQLite DB: ../data/processed/macro.db
+✅ SQL outputs:
+ - data/processed/sql_snapshot.csv
+ - data/processed/sql_last12.csv
+2026-04-12 19:49:33,023 | INFO | Running us_macro_index.py
+2026-04-12 19:49:34,906 | INFO | ✅ Top risk periods saved.
+✅ Macro Financial Stress Index Created
+          date  macro_stress_index stress_level
+766 2025-11-01           -2.057564     VERY LOW
+767 2025-12-01           -2.158403     VERY LOW
+768 2026-01-01           -2.308446     VERY LOW
+769 2026-02-01           -2.264743     VERY LOW
+770 2026-03-01           -1.977330     VERY LOW
+✅ Chart with forecast saved to reports/macro_stress_index.png
+✅ Charts saved:
+ - reports/macro_stress_index_full.png
+ - reports/macro_stress_index_recent.png
+2026-04-12 19:49:34,907 | INFO | Running us_excel_report.py
+2026-04-12 19:49:36,296 | INFO | ✅ Excel Report Generated: ../reports/macro_us_report.xlsx
+2026-04-12 19:49:36,296 | INFO | Running us_pdf_report.py
+2026-04-12 19:49:36,974 | INFO | ✅ PDF upgraded with executive insight: C:\Users\gabri\Desktop\fpna-macro-risk-intelligence-system\reports\macro_us_executive_brief.pdf
+2026-04-12 19:49:36,974 | INFO | FULL PIPELINE EXECUTED SUCCESSFULLY
