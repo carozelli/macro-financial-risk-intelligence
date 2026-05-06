@@ -92,8 +92,6 @@ Each regime is mapped to a historical macroeconomic interpretation to support fi
 
 ---
 
----
-
 ## Financial Decision Impact
 
 The system bridges raw macroeconomic volatility and structured financial interpretation.
@@ -122,7 +120,23 @@ By automating data collection, transformation, and reporting, the system reduces
 
 ---
 
+## API Configuration
+
+This project uses the FRED API, which requires an API key.
+
+To run the pipeline locally:
+
+1. Create a `.env` file in the project root
+2. Add your API key:
+
+FRED_API_KEY=your_api_key_here
+
+All datasets and reports are already included in this repository for evaluation purposes.
+
+---
+---
+
 ## How to Run
 
 ```bash
-py run_pipeline.py
+py src/run_pipeline.py
